@@ -8,7 +8,7 @@ uses
 
 Var  i, n, Sum, count, mid:Integer;
 	  mas: Array[1..100] of Integer;
-
+		
 	  function CountMiddle():Integer;
 		var i, MidleSum: Integer;
 			arr: Array[1..100] of Integer;
@@ -33,22 +33,26 @@ Var  i, n, Sum, count, mid:Integer;
 		nearest:=mas[1];
 		idx:=1;
 		for i:= 1 to n do 
-			if(mas[i] > Sum) then
-				if((Sum mod mas[i])<=(Sum mod nearest)) then 
+			if(mas[i]=sum)then
+			begin
+				nearest:= sum; 
+				idx:=i;
+			end;	
+			if(mas[i] < Sum) then
+				if((Sum - mas[i])<(Sum - nearest)) then 
 					begin
 						nearest:= mas[i];
 						idx:=i;
-					end 		
-			else if((Sum mod (mas[i]-sum))<=(Sum mod nearest)) then 
+					end; 	
+			if(mas[i] > Sum) then
+			if((mas[i] - sum)<(Sum - nearest)) then 
 					begin
-						nearest:= mas[i]-sum; 
+						nearest:= mas[i] - (mas[i] - sum);  
 						idx:=i;
-					end; 				
+					end; 
 			writeln('>>Среднее арифиметическое текущего массива ', Sum);
-			if(mas[idx]>sum) then
-				writeln('>>Ближайшее к нему, это ',idx,' элемент, со значением ',(nearest + (mas[idx] mod sum)))
-			else writeln('>>Ближайшее к нему, это ',idx,' элемент, со значением ',nearest);
-		end;
+			writeln('>>Ближайшее к нему, это ',idx,' элемент, со значением ',mas[idx]);
+    end;
 begin
 randomize;
 SetConsoleCP(1251);
@@ -57,11 +61,7 @@ Sum:=0;
 writeln('>>FunctionLab начал работу...');
 write('>>Введите размер массивов: ');Readln(n);
 write('>>Сколько массивов следует обработать? ');Readln(count);
-for i:= 1 to count do 
-	begin
-	mid:=CountMiddle();
-	ProceedArray(mid);
-	end;
+for i:= 1 to count do ProceedArray(CountMiddle());
 write('>>FunctionLab закончил работу, спасибо за использование!');
 Readln;			
 end.

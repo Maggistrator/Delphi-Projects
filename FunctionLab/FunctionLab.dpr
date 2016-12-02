@@ -49,7 +49,8 @@ Var  i, n, Sum, count, mid:Integer;
 					begin
 						nearest:= mas[i] - (mas[i] - sum);  
 						idx:=i;
-					end; 
+					end;
+      writeln;
 			writeln('>>Среднее арифиметическое текущего массива ', Sum);
 			writeln('>>Ближайшее к нему, это ',idx,' элемент, со значением ',mas[idx]);
     end;
