@@ -1,4 +1,4 @@
-program CalculateLab_VI;
+program CalculateLab_VII;
 
 {$APPTYPE CONSOLE}
 
@@ -37,10 +37,9 @@ for i:= 1 to 15 do
 				max:= arr[i];
 				idx_max:=i;
 			end;	
-		end;
-	end;
+		end;	end;
 writeln('Минимальный элемент: ', min, ' с индексом ',idx_min);	
-writeln('Максимальный элемент: ', max, ' с индексом ',idx_min);	
+writeln('Максимальный элемент: ', max, ' с индексом ',idx_max);	
 Readln;
 end.
 

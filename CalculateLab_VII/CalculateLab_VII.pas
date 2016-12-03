@@ -40,7 +40,7 @@ for i:= 1 to 15 do
 		end;
 	end;
 writeln('Минимальный элемент: ', min, ' с индексом ',idx_min);	
-writeln('Максимальный элемент: ', max, ' с индексом ',idx_min);	
+writeln('Максимальный элемент: ', max, ' с индексом ',idx_max);	
 Readln;
 end.
 
