@@ -8,12 +8,14 @@ uses
 
 Var i, sum, count:Integer;
 	text: String;
+//	word: Array[1..45] of String;
 begin
 SetConsoleCP(1251);
 SetConsoleOutPutCP(1251);
 Readln('Введите текст: ', text);
-if(text=='child') then  text := StringReplace(text, ' child ', ' children ',
-                          [rfReplaceAll, rfIgnoreCase]);
+text := StringReplace(text, ' child ', ' children ', [rfReplaceAll, rfIgnoreCase]);
+Writeln('Все вхождения слова "child" заменены на "children"');
+Writeln('Строка: ', text);
 Readln;
 end. 
 
