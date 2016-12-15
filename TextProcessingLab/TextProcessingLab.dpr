@@ -11,15 +11,13 @@ begin
 SetConsoleCP(1251);
 SetConsoleOutPutCP(1251);
 writeln('>>TextProcessingLab начал работу');
-writeln('Введите строку: '); readln(text);
-if(length(text)=0) then writeln('Строка пуста')
+write('>>¬ведите строку: '); readln(text);
+if(length(text)=0) then writeln('—трока пуста')
 else
 	begin
 		text := StringReplace(text, 'child', 'children', [rfReplaceAll, rfIgnoreCase]);
-		writeln('>>Все вхождения слова child заменены на children');
-		writeln('Строка: ',text); 	
+		writeln('>>¬се вхождени€ слова child заменены на children');
+		writeln('—трока: ',text);
 	end;
 Readln;
-end. 
-
-//Child like child, nothing special
+end.

@@ -57,7 +57,7 @@ end;
 					idx := idx + 1;
 					nearest := mas[idx];
 				end;
-			writeln('Ближайшее: ', nearest);
+			writeln('Ближайшее: ', nearest,' с индексом ',idx);
 			Result := nearest;
 		end;
 begin
