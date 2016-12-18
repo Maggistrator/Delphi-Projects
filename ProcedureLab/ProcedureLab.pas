@@ -8,7 +8,6 @@ uses
 
 Var  i, S1, S2, buf :Integer;
 	  z: Real;
-	  isFunny: String;
 		procedure CountPozitive(arr: Array of Integer; n: integer);
 		var i, counter: integer;
 		begin
@@ -23,24 +22,15 @@ Var  i, S1, S2, buf :Integer;
 		var i: Integer;
 			arr: Array[1..100] of Integer;
 		begin
-			for i:= 1 to n do
-				begin
-				if(i=1)then writeln('>>Исполнение процедуры обработки массива...');				
-				if isFunny = 'y' then
-						begin
-							arr[i]:=Random(5)-2;
-							if(arr[i]<0) then write('|',arr[i],'|__')
-							else write('| ', arr[i],'|__');
-							if(i mod 10 = 0) then writeln('|');
-						end
-						else
-							begin
-								arr[i]:=Random(5)-2;
-								if(arr[i]<0) then write(' ',arr[i],'  ')
-								else write('  ', arr[i],'  ');
-								if(i mod 10 = 0) then writeln;
-							end;
-				end;
+		writeln('>>Исполнение процедуры обработки массива...');
+		for i:= 1 to n do
+			begin				
+				arr[i]:=Random(5)-2;
+				if(arr[i]<0) then write(' ',arr[i],'  ')
+				else write('  ', arr[i],'  ');
+				if(i mod 10 = 0) then writeln;
+			end;
+		end;
 		CountPozitive(arr, n);
 		end;
 begin
@@ -49,8 +39,6 @@ SetConsoleCP(1251);
 SetConsoleOutPutCP(1251);
 writeln('>>ProcedureLab начал работу...');
 writeln('>>Создаётся массив, пожалуйста подождите...');
-write('>>Включить забавный режим?(y/n): ');Readln(isFunny);
-if isFunny = 'y' then writeln('>>Забавный режим активен!');
 ProceedArray(60);
 S1:=buf;
 ProceedArray(50);
