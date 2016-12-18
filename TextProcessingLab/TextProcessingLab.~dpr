@@ -1,0 +1,21 @@
+program TextProcessingLab;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  Windows;
+
+Var text: String;
+begin
+SetConsoleCP(1251);
+SetConsoleOutPutCP(1251);
+writeln('>>TextProcessingLab начал работу');
+text:='Child like child, nothing special';
+writeln('Строка: ',text);
+text := StringReplace(text, 'child', 'children', [rfReplaceAll, rfIgnoreCase]);
+writeln('>>Все вхождениЯ слова child заменены на children');
+writeln('Строка: ',text);
+Readln;
+end. 
+
