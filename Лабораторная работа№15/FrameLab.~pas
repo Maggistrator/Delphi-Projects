@@ -30,16 +30,15 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
-var data : Integer;
-    result : real;
+var data, result : real;
 begin
-  data := StrToInt(Edit1.Text);
-  result := data*data*3/4;
+  data := StrToFloat(Edit1.Text);
+  result := data*data*3/4/3;
   Edit2.Text := FloatToStr(result);
 end;
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-Form1.Close
+Form1.Close;
 end;
 end.
          
