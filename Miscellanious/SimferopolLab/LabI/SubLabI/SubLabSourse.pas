@@ -11,9 +11,9 @@ Var first, second:Real;
 begin
 	SetConsoleCP(1251);
 	SetConsoleOutPutCP(1251);
-	write('>>¬ведите первое число! '); readln(first);
-	write('>>¬ведите второе число! '); readln(second);
-	if(first=second) writeln('„исла совпадают, попробуйте ещЄ раз!');
+	write('>>Введите первое число! '); readln(first);
+	write('>>Введите второе число! '); readln(second);
+	if(first=second) writeln('Числа совпадают, попробуйте ещё раз!');
 	else
 		begin
 			if(first>second) then

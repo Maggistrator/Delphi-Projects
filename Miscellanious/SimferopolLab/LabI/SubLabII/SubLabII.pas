@@ -1,0 +1,27 @@
+program SubLabII;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  Windows;
+
+Var first, second, third:Real;
+
+begin
+	SetConsoleCP(1251);
+	SetConsoleOutPutCP(1251);
+	write('>>¬ведите первое число! '); readln(first);
+	write('>>¬ведите второе число! '); readln(second);
+	write('>>¬ведите второе число! '); readln(third);
+	if((first<second) and (second<third)) then
+		begin
+			writeln('”словие выполн€етс€.');
+		end
+	else
+		begin
+			writeln('”словие не выполн€етс€.');
+		end;
+	Readln;
+end.
+
