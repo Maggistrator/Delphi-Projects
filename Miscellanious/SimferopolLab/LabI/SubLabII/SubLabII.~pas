@@ -1,4 +1,4 @@
-program SubLabI;
+program SubLabII;
 
 {$APPTYPE CONSOLE}
 
@@ -13,15 +13,9 @@ begin
 	SetConsoleOutPutCP(1251);
 	write('>>Введите первое число! '); readln(first);
 	write('>>Введите второе число! '); readln(second);
-	write('>>Введите второе число! '); readln(third);
-	if(first<second and second<third) then
-		begin
-			writeln('Условие выполняется.');
-		end
-	else
-		begin
-			writeln('Условие не выполняется.');
-		end
+	write('>>Введите третье число! '); readln(third);
+	if((first<second) and (second<third)) then writeln('Условие выполняется.')
+	else writeln('Условие не выполняется.');
 	Readln;
 end.
 
